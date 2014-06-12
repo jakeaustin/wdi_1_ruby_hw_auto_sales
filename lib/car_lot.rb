@@ -13,10 +13,14 @@ class CarLot
   def sell(car)
   end
 
-  def search(make: nil, model: nil, year: nil, used: false)
+  def search(make: nil, model: nil, year: nil)
+
   end
 
   def lot_value
+    val = 0
+    @cars.each { |car| val += car.price }
+    val
   end
 
   def lot_revenue

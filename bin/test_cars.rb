@@ -13,20 +13,15 @@ moreDamagedCar = UsedCar.new('Land Rover', 'Range Rover', 2003, 30_000, 10_000, 
 
 testLot = CarLot.new("Honest Jake's Fine Automobiles")
 
-puts
-puts testUsedCar.price
-puts
-
 # markup represented as percentage
 testUsedCar.markup = 0.50
 testLot.cars << testCar << testUsedCar << testDamagedCar << moreDamagedCar
 
+puts testCar.price
+puts testUsedCar.price
+puts testDamagedCar.price
+puts moreDamagedCar.price
 
-puts testCar.inspect
-puts testUsedCar.inspect
-puts testDamagedCar.inspect
-puts moreDamagedCar.inspect
-puts testLot.inspect
 
 
 binding.pry
