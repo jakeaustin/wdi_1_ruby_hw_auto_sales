@@ -13,6 +13,12 @@ moreDamagedCar = UsedCar.new('Land Rover', 'Range Rover', 2003, 30_000, 10_000, 
 
 testLot = CarLot.new("Honest Jake's Fine Automobiles")
 
+puts
+puts testUsedCar.price
+puts
+
+# markup represented as percentage
+testUsedCar.markup = 0.50
 testLot.cars << testCar << testUsedCar << testDamagedCar << moreDamagedCar
 
 
