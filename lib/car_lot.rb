@@ -11,7 +11,7 @@ class CarLot
   end
 
   def search(search_terms = {})
-    match = @cars
+    matches = @cars
     search_terms.each  do |term, value|
        matches = matches.select { |car| car.send(term)  == value }
     end
