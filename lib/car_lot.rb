@@ -10,17 +10,21 @@ class CarLot
     @cars = []
   end
 
-  def sell(car)
-  end
-
-  def search(make: nil, model: nil, year: nil)
-
+  def search(search_terms = {})
+    match = @cars
+    search_terms.each  do |term, value|
+       matches = matches.select { |car| car.send(term)  == value }
+    end
+    matches
   end
 
   def lot_value
     val = 0
     @cars.each { |car| val += car.price }
     val
+  end
+
+  def sell(car)
   end
 
   def lot_revenue
